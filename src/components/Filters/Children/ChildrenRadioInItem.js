@@ -6,6 +6,7 @@ export default function ChildrenRadioInItem({ name, value, text, isDisable, hand
                     className="filters__input-radio"
                     type="radio"
                     value={value}
+                    // checked={currentValue === value}
                     onChange={handlerOnChange}
                     disabled={isDisable && 'disabled'}
                 />

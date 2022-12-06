@@ -1,8 +1,3 @@
-// const BOUNDSLANDCOMM = [ 1000, 5000, 10000, 25000 ];
-// const BOUNDSLANDINDUSTR = [ 10000, 100000, 500000 ];
-// const BOUNDSBUILDCOMM = [ 1000, 5000, 10000, 25000 ];
-// const BOUNDSBUILDINDUSTR = [ 10000, 100000, 500000 ];
-
 const CORRECTIONTYPES = [
     {value: 'Скидка на торг (%)', 'isOn': true}, 
     {value: 'Общая площадь (коэффициент торможения)', 'isOn': true},
@@ -46,10 +41,6 @@ const REGIONSELECTED = 'Воронежская';
 const CORRECTIONSELECTED = 'Общая площадь (коэффициент торможения)';
 
 export {
-    // BOUNDSLANDCOMM,
-    // BOUNDSLANDINDUSTR,
-    // BOUNDSBUILDCOMM,
-    // BOUNDSBUILDINDUSTR,
     CORRECTIONTYPES,
     YEARS_BREAK,
     REGIONS,
