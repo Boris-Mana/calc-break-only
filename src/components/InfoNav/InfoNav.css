@@ -1,0 +1,66 @@
+.infoNav {
+  max-width: 768px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 200px;
+  padding: 20px 15px;
+  margin: auto;
+  border-top: 2px solid #c5c5c5;
+}
+
+.infoNav__logo {
+  height: 7vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .infoNav-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.infoNav__link {
+  margin-top: 15px;
+  max-width: 500px;
+  /* min-height: 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #4d4d4d;
+  gap: 20px;
+  /* text-decoration: none; */
+  font-family: 'Montserrat Regular', Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.infoNav__link:hover {
+  opacity: 0.6;
+  color: #f60;
+  transition: opacity 1s linear;
+}
+
+.infoNav__copyright {
+  font-family: 'Montserrat Regular', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 767px) {
+  .infoNav {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .infoNav__link {
+    font-size: 12px;
+  }
+
+  .infoNav__copyright {
+    font-size: 11px;
+  }
+}

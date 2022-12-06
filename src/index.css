@@ -1,0 +1,8 @@
+@import url(./vendor/normalize.css);
+@import url(./vendor/fonts/fonts.css);
+
+@import url(./components/About/About.css);
+@import url(./components/App/App.css);
+@import url(./components/Calc/Calc.css);
+@import url(./components/Filters/Filters.css);
+@import url(./components/InfoNav/InfoNav.css);

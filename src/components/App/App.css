@@ -1,0 +1,35 @@
+.App {
+  max-width: 768px;
+  font-family: "Montserrat Regular", Arial, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.4;
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  margin: auto;
+  padding: 0;
+}
+
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+@media screen and (max-width: 767px) {
+  .App {
+    max-width: 320px;
+    flex-direction: column;   
+    align-items: center;
+    margin: auto;
+  }
+}

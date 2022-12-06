@@ -1,0 +1,39 @@
+{
+  "name": "calc-sq-correct",
+  "version": "0.0.1",
+  "description": "''",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && webpack",
+    "dev": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Boris-Mana/calc-sq-correct.git"
+  },
+  "author": "bmana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Boris-Mana/calc-sq-correct/issues"
+  },
+  "homepage": "https://github.com/Boris-Mana/calc-sq-correct#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "cssnano": "^5.1.12",
+    "html-webpack-plugin": "^5.5.0",
+    "i": "^0.3.7",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss-loader": "^7.0.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  },
+  "dependencies": {
+    "core-js": "^3.24.0"
+  }
+}

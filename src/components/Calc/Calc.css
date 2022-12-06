@@ -1,0 +1,304 @@
+.calc__container {
+    width: 450px;
+    height: 210px;    
+    padding: 15px;    
+    margin: auto;
+    display: grid;
+    grid-template-columns: 40px 170px 40px 120px 50px;
+    grid-template-rows: 45px 45px 60px 30px;
+    /* align-content: stretch;
+    justify-content: stretch; */
+    border-radius: 7px;
+    font-family: 'Montserrat Regular', Arial, sans-serif;
+    border: 2px solid #f60;
+    box-sizing: border-box;
+    background-color: gainsboro;    
+}
+
+.calc__title {
+    font-family: "Montserrat Bold", Arial, sans-serif;
+    max-width: 500px;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    margin: auto;
+    padding: 30px 0 0;
+    color: #f60;
+}
+
+.calc__subtitle {
+    font-family: "Montserrat Regular", Arial, sans-serif;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    margin: auto;
+    padding: 0 0 10px;
+    color: #f60;
+}
+
+
+.calc__container_input {
+    border: none;
+    font-size: 24px;
+    line-height: 1.15;
+    text-align: center;
+    width: 95%;
+    height: 34px;    
+    align-self: start;    
+}
+
+.calc__container_input:hover {
+    box-shadow: 0 0 15px 0 #888
+}
+
+.calc__container_input::placeholder {    
+    font-size: 14px;    
+    color: #C4C4C4;    
+}
+
+.calc__container_input_degree {
+    text-align: left; 
+    background-color: rgb(255, 229, 174);
+}
+
+/* .container_item_math {
+    font-family: 'Montserrat Regular', Arial, sans-serif;        
+    font-size: 48px;    
+} */
+
+
+.container_degree {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: rgb(255, 229, 174);
+}
+
+.degree_minus {
+    font-family: "Montserrat Bold", Arial, sans-serif;
+    width: 5%;
+    font-size: 18px;
+    line-height: .1;
+    text-align: left;
+    padding-right: 5px;
+}
+
+.container_item {
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    place-self: center;    
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    /* color: #fff; */
+    line-height: 1.20;
+    padding: 0;
+    margin: 0;
+    /* position: absolute;
+    bottom: -20px; */
+}
+
+.container_item:nth-child(1) {
+    /* grid-column: span 2; */    
+    grid-row: span 2;
+    font-family: "Montserrat Light";
+    font-size: 72px;
+    line-height: 1.2;    
+    padding-bottom: 15px;    
+}
+
+.container_item:nth-child(2) {
+    align-items: flex-end;
+}
+
+.container_item:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2/3;
+    border-top: 1px solid #000;
+    padding-top: 5px;
+    
+}
+
+.container_item:nth-child(4) {
+    /* grid-column: span 2; */
+    grid-row: span 2;    
+    font-family: "Montserrat Light";
+    font-size: 72px;
+    line-height: 1.2;    
+    padding-bottom: 15px;
+
+}
+
+.container_item:nth-child(5) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+}
+
+.container_item:nth-child(6) {
+    grid-column: 4;
+    grid-row: 2/3;     
+    width: 100%;       
+    margin: auto;   
+    padding: 0;
+}
+
+.container_item:nth-child(7) {
+    /* grid-column: span 2; */
+    grid-row: span 2;    
+    font-family: "Montserrat Light";
+    font-size: 72px;
+    line-height: 1.2;    
+    /* padding-bottom: 15px;     */
+    
+}
+
+.container_item:nth-child(8) {    
+    min-height: 90%;
+    max-height: 90%;
+    /* grid-row: 3/4; */
+    margin: auto;
+    /* margin-top: 10px; */
+    grid-column: span 5;    
+    /* grid-row: span 2;     */
+}
+
+.container_item:nth-child(9) {    
+    min-height: 90%;    
+    max-height: 90%;    
+    /* grid-row: 4/5; */
+    margin: auto;
+    /* margin-top: 10px; */
+    grid-column: span 5;    
+    /* grid-row: span 2;     */
+}
+
+/* .container_item_is_result {
+    font-size: 45px;
+    line-height: 1.15;    
+} */
+
+.container_degree-comment {
+    font-size: 12px;
+    line-height: 1.1;    
+    text-align: left;       
+    align-self: start;
+    /* margin-bottom: 30px; */
+}
+
+.container_text {
+    padding: 0;
+    margin: 0;
+}
+
+.resut_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.result_part {
+    width: 25%;
+    height: 50px;            
+    border: 2px solid #ffdcb8;
+    background-color: #fff;
+    margin: auto;
+    padding: 0;
+    font-size: 14px;
+    flex-direction: column;    
+    justify-content: center;
+}
+
+.result_part_or {
+    width: 10%;
+    color: #888;    
+    /* line-height: 4; */
+}
+
+.result_part_is-result {
+    font-size: 26px;  
+    margin: auto;
+    line-height: 1.8;    
+    justify-self: flex-start;
+}
+
+.result_part_comment {
+    margin: 0;
+    padding: 0;
+    color: #888;
+    width: 40%;  
+    font-size: 12px;
+    line-height: 1.15;
+    /* padding-top: 10px; */
+}
+
+.comment_result_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* ==================================================================================================== */
+
+@media screen and (max-width: 767px) {
+    .calc__container {
+        width: 316px;
+        height: 195px;    
+        padding: 5px;            
+        grid-template-columns: 30px 115px 30px 100px 30px;
+        grid-template-rows: 35px 50px 45px 60px;        
+    }    
+    .calc__title {        
+        font-size: 16px;
+        line-height: 1.2;        
+    }
+    
+    .calc__subtitle {        
+        font-size: 14px;
+        line-height: 1.6;        
+    }
+    
+    
+    .calc__container_input {
+        border: none;
+        font-size: 18px;
+        line-height: 1.4;        
+    }    
+    
+    .calc__container_input::placeholder {    
+        font-size: 11px;            
+    }
+        
+    .container_degree-comment {
+        font-size: 11px;
+        margin-top: 5px;        
+    }
+
+    .result_part_is-result {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+    
+    .result_part {        
+        font-size: 12px;
+        line-height: 1.7;        
+    }
+    
+    .result_part_comment {        
+        font-size: 11px;
+        line-height: 1.2;        
+    }    
+}
