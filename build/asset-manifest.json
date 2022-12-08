@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/calc-sq-correct/static/css/main.b6dbb0a8.css",
-    "main.js": "/calc-sq-correct/static/js/main.8d494daa.js",
-    "static/js/787.f667dbbe.chunk.js": "/calc-sq-correct/static/js/787.f667dbbe.chunk.js",
-    "static/media/logoInvestocenka3.svg": "/calc-sq-correct/static/media/logoInvestocenka3.12269f54e8f872ab0e22cdd5eac9d7d8.svg",
-    "static/media/montserrat-bold.woff": "/calc-sq-correct/static/media/montserrat-bold.05eda27dcdadfda355f6.woff",
-    "static/media/montserrat-regular.woff": "/calc-sq-correct/static/media/montserrat-regular.e01d048caf7e291dbc7a.woff",
-    "static/media/montserrat-light.woff": "/calc-sq-correct/static/media/montserrat-light.c05106664a3882dc45e8.woff",
-    "static/media/montserrat-regular.woff2": "/calc-sq-correct/static/media/montserrat-regular.06bb8016397fac883e13.woff2",
-    "static/media/montserrat-bold.woff2": "/calc-sq-correct/static/media/montserrat-bold.d5dcfbf5990fe993c7c0.woff2",
-    "static/media/montserrat-light.woff2": "/calc-sq-correct/static/media/montserrat-light.321a2ac93846daf8e951.woff2",
-    "index.html": "/calc-sq-correct/index.html",
-    "main.b6dbb0a8.css.map": "/calc-sq-correct/static/css/main.b6dbb0a8.css.map",
-    "main.8d494daa.js.map": "/calc-sq-correct/static/js/main.8d494daa.js.map",
-    "787.f667dbbe.chunk.js.map": "/calc-sq-correct/static/js/787.f667dbbe.chunk.js.map"
+    "main.css": "/calc-break-only/static/css/main.9f5ee2e3.css",
+    "main.js": "/calc-break-only/static/js/main.7fbafc75.js",
+    "static/js/787.3e0a177a.chunk.js": "/calc-break-only/static/js/787.3e0a177a.chunk.js",
+    "static/media/logoInvestocenka3.svg": "/calc-break-only/static/media/logoInvestocenka3.12269f54e8f872ab0e22cdd5eac9d7d8.svg",
+    "static/media/montserrat-bold.woff": "/calc-break-only/static/media/montserrat-bold.05eda27dcdadfda355f6.woff",
+    "static/media/montserrat-regular.woff": "/calc-break-only/static/media/montserrat-regular.e01d048caf7e291dbc7a.woff",
+    "static/media/montserrat-light.woff": "/calc-break-only/static/media/montserrat-light.c05106664a3882dc45e8.woff",
+    "static/media/montserrat-regular.woff2": "/calc-break-only/static/media/montserrat-regular.06bb8016397fac883e13.woff2",
+    "static/media/montserrat-bold.woff2": "/calc-break-only/static/media/montserrat-bold.d5dcfbf5990fe993c7c0.woff2",
+    "static/media/montserrat-light.woff2": "/calc-break-only/static/media/montserrat-light.321a2ac93846daf8e951.woff2",
+    "index.html": "/calc-break-only/index.html",
+    "main.9f5ee2e3.css.map": "/calc-break-only/static/css/main.9f5ee2e3.css.map",
+    "main.7fbafc75.js.map": "/calc-break-only/static/js/main.7fbafc75.js.map",
+    "787.3e0a177a.chunk.js.map": "/calc-break-only/static/js/787.3e0a177a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6dbb0a8.css",
-    "static/js/main.8d494daa.js"
+    "static/css/main.9f5ee2e3.css",
+    "static/js/main.7fbafc75.js"
   ]
 }

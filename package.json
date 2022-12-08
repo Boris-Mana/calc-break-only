@@ -1,7 +1,7 @@
 {
-  "name": "calc-sq-correct",
+  "name": "calc-break-only",
   "version": "0.1.0",
-  "homepage": "https://boris-mana.github.io/calc-sq-correct",
+  "homepage": "https://boris-mana.github.io/calc-break-only/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
