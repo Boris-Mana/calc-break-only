@@ -8,8 +8,8 @@ import ChildrenRadioInItem from "./Children/ChildrenRadioInItem";
 import calculateBreakRatio from "../../utils/calculateBreakRatio";
 
 import {
-    YEARSELECTED,
-    REGIONSELECTED,
+    // YEARSELECTED,
+    // REGIONSELECTED,
     CORRECTIONSELECTED,
 } from '../../utils/Constants/ConstantsCommon'
 
@@ -19,21 +19,31 @@ export default function Calc({ onSendResult, resutToShow }) {
     const [isSendResultActive, setIsSendResultActive] = useState(false);
 
     const [correctionType, setCorrectionType] = useState(CORRECTIONSELECTED);
-    const [year, setYear] = useState(YEARSELECTED);
-    const [region, setRegion] = useState(REGIONSELECTED);
+    const [year, setYear] = useState(YEARS_BREAK[0].value);
+    const [yearComment, setYearComment] = useState(YEARS_BREAK[0].comment);
+    // const [yearBread, setYearBread] = useState(YEARSELECTED);
+    const [region, setRegion] = useState(REGIONS_BREAK[0].value);
+    // const [regionBread, setRegionBread] = useState(REGIONSELECTED);
     const [realtyType, setRealtyType] = useState('');
+    const [realtyTypeBread, setRealtyTypeBread] = useState('');
     const [purpose, setPurpose] = useState('');
+    const [purposeBread, setPurposeBread] = useState('');
     const [minMaxMid, setMinMaxMid] = useState('');
-    const [ratioBreakResult, setRatioBreakResult] = useState('');
-    const [intervalType, setIntervalType] = useState('');    
+    const [minMaxMidBread, setMinMaxMidBread] = useState('');
+    const [intervalType, setIntervalType] = useState('');
+    const [intervalTypeBread, setIntervalTypeBread] = useState('');
+        
+    const [ratioBreakResult, setRatioBreakResult] = useState('');    
 
     const handleYearChange = (category) => {
+        const year_index = YEARS_BREAK.findIndex(item => item.value === category);
         setYear(category);
+        setYearComment(YEARS_BREAK[year_index].comment)
         // console.log('Сработал селектор', category);
     };
 
     const handleRegionChange = (category) => {
-        setRegion(category);
+        setRegion(category);        
         // console.log('Сработал селектор', category);
     };
 
@@ -45,10 +55,10 @@ export default function Calc({ onSendResult, resutToShow }) {
         }
     };
 
-    const handleRealTypeChange = (e) => {
+    const handleRealTypeChange = (e) => {        
         // e.preventDefault();
-        setRealtyType(e.target.value);
-        setPurpose('');
+        setRealtyType(e.target.value);        
+        // setPurpose('');
         // console.log('Селектор типа недв', e.target.value);
     };
 
@@ -104,22 +114,22 @@ export default function Calc({ onSendResult, resutToShow }) {
     );
 
     const paramsMinMaxChooseDoverInterval = [
-        { name: 'use', value: 'min', text: 'минимальное', isOn: true },
-        { name: 'use', value: 'mid', text: 'среднее', isOn: true },
-        { name: 'use', value: 'max', text: 'максимальное', isOn: true },
+        { name: 'use', value: 'минимальное', text: 'минимальное', isOn: true },
+        { name: 'use', value: 'среднее', text: 'среднее', isOn: true },
+        { name: 'use', value: 'максимальное', text: 'максимальное', isOn: true },
     ];
 
     const paramsChooseIntervalTypeBreak = (
         <>
-            <ChildrenRadioInItem name='interval' value='dov' text='Доверительный (с вероятностью 95%, 2σ нормального распределения)' handlerOnChange={handleInterval} />
-            <ChildrenRadioInItem name='interval' value='ext' text='Расширенный (интервал возможных значений, от минимума до максимума)среднее' handlerOnChange={handleInterval} />
+            <ChildrenRadioInItem name='interval' value='Доверительный' text='Доверительный (с вероятностью 95%, 2σ нормального распределения)' handlerOnChange={handleInterval} />
+            <ChildrenRadioInItem name='interval' value='Расширенный' text='Расширенный (интервал возможных значений, от минимума до максимума)среднее' handlerOnChange={handleInterval} />
         </>
     );
 
     const paramsMinMaxChooseExtInterval = [
-        { name: 'use', value: 'min', text: 'минимальное', isOn: false },
-        { name: 'use', value: 'mid', text: 'среднее', isOn: true },
-        { name: 'use', value: 'max', text: 'максимальное', isOn: false },
+        { name: 'use', value: 'минимальное', text: 'минимальное', isOn: false },
+        { name: 'use', value: 'среднее', text: 'среднее', isOn: true },
+        { name: 'use', value: 'максимальное', text: 'максимальное', isOn: false },
     ];
 
     const chooseMinMaxMidTypeDov = fillRadioBox(paramsMinMaxChooseDoverInterval, handleSetMinMaxMidl);
@@ -160,7 +170,7 @@ export default function Calc({ onSendResult, resutToShow }) {
 
             <fieldset className="filters__form">
                 <FilterElement title="Область (регион)" children={chooseDistrict} childrenDrop={childrenRegionDrop} />
-                <FilterElement title="Период (год)" children={chooseYear} childrenDrop={childrenYearDrop} />
+                <FilterElement title="Дата актуальности исследования" comment={yearComment} children={chooseYear} childrenDrop={childrenYearDrop} />
                 <FilterElement title="Тип недвижимости" children={chooseRealtyType} />
                 <FilterElement
                     title={`Функциональное назначение (вид использования)`}
@@ -170,9 +180,20 @@ export default function Calc({ onSendResult, resutToShow }) {
                 />
 
                 <FilterElement title="Вид интервала значений" children={paramsChooseIntervalTypeBreak} />
-                <FilterElement title="Значение коэффициента торможения" children={intervalType === 'dov' ? chooseMinMaxMidTypeDov : chooseMinMaxMidTypeExt} />
+                <FilterElement title="Значение коэффициента торможения" children={intervalType === 'Доверительный' ? chooseMinMaxMidTypeDov : chooseMinMaxMidTypeExt} />
 
             </fieldset>
+            <h3 className="filters__breadscr-title">
+                Выбраны параметры:
+            </h3>
+            <div className="filters__breadscr-container">
+                <p className="filters__breadscr-text">{`${year} > `}</p>
+                <p className="filters__breadscr-text">{`${region} > `}</p>
+                <p className="filters__breadscr-text">{`${realtyType} > `}</p>
+                <p className="filters__breadscr-text">{`${purpose} > `}</p>
+                <p className="filters__breadscr-text">{`${intervalType} > `}</p>
+                <p className="filters__breadscr-text">{`${minMaxMid}`}</p>                
+            </div>
             {breakResultBox}
         </form>
     );

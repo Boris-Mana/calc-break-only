@@ -1,11 +1,11 @@
 .calc__container {
     width: 450px;
-    height: 210px;    
+    height: 250px;    
     padding: 15px;    
     margin: auto;
     display: grid;
     grid-template-columns: 40px 170px 40px 120px 50px;
-    grid-template-rows: 45px 45px 60px 30px;
+    grid-template-rows: 40px 45px 45px 60px 20px;
     /* align-content: stretch;
     justify-content: stretch; */
     border-radius: 7px;
@@ -37,6 +37,9 @@
     color: #f60;
 }
 
+.calc__logo {
+    width: 200px;    
+  }
 
 .calc__container_input {
     border: none;
@@ -92,9 +95,9 @@
     max-height: 100%;
     object-fit: contain;
     place-self: center;    
-    display: flex;    
-    align-items: center;
-    justify-content: center;
+    /* display: flex;     */
+    /* align-items: center; */
+    /* justify-content: center; */
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -107,7 +110,16 @@
 }
 
 .container_item:nth-child(1) {
-    /* grid-column: span 2; */    
+    grid-column: span 5;    
+    /* grid-row: span 2; */    
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.container_item:nth-child(2) {
+    /* grid-column: span 5;     */
     grid-row: span 2;
     font-family: "Montserrat Light";
     font-size: 72px;
@@ -115,19 +127,19 @@
     padding-bottom: 15px;    
 }
 
-.container_item:nth-child(2) {
+.container_item:nth-child(3) {
     align-items: flex-end;
 }
 
-.container_item:nth-child(3) {
+.container_item:nth-child(4) {
     grid-column: 2;
-    grid-row: 2/3;
+    grid-row: 3/4;
     border-top: 1px solid #000;
     padding-top: 5px;
     
 }
 
-.container_item:nth-child(4) {
+.container_item:nth-child(5) {
     /* grid-column: span 2; */
     grid-row: span 2;    
     font-family: "Montserrat Light";
@@ -137,22 +149,22 @@
 
 }
 
-.container_item:nth-child(5) {
+.container_item:nth-child(6) {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;    
 }
 
-.container_item:nth-child(6) {
+.container_item:nth-child(7) {
     grid-column: 4;
-    grid-row: 2/3;     
+    grid-row: 3/4;     
     width: 100%;       
     margin: auto;   
     padding: 0;
 }
 
-.container_item:nth-child(7) {
+.container_item:nth-child(8) {
     /* grid-column: span 2; */
     grid-row: span 2;    
     font-family: "Montserrat Light";
@@ -162,7 +174,7 @@
     
 }
 
-.container_item:nth-child(8) {    
+.container_item:nth-child(9) {    
     min-height: 90%;
     max-height: 90%;
     /* grid-row: 3/4; */
@@ -172,14 +184,18 @@
     /* grid-row: span 2;     */
 }
 
-.container_item:nth-child(9) {    
+.container_item:nth-child(10) {    
     min-height: 90%;    
     max-height: 90%;    
-    /* grid-row: 4/5; */
-    margin: auto;
+    /* grid-row: 4/5; */    
+    margin: auto;    
     /* margin-top: 10px; */
     grid-column: span 5;    
     /* grid-row: span 2;     */
+    display: flex;
+    justify-content: center;
+    column-gap: 80px;
+    
 }
 
 /* .container_item_is_result {
@@ -216,9 +232,11 @@
     margin: auto;
     padding: 0;
     font-size: 14px;
+    line-height: 1.6;    
     flex-direction: column;    
     justify-content: center;
 }
+
 
 .result_part_or {
     width: 10%;
@@ -234,10 +252,10 @@
 }
 
 .result_part_comment {
+    min-width: 100%;
     margin: 0;
     padding: 0;
-    color: #888;
-    width: 40%;  
+    color: #888;    
     font-size: 12px;
     line-height: 1.15;
     /* padding-top: 10px; */
@@ -255,11 +273,11 @@
 
 @media screen and (max-width: 767px) {
     .calc__container {
-        width: 316px;
-        height: 195px;    
-        padding: 5px;            
-        grid-template-columns: 30px 115px 30px 100px 30px;
-        grid-template-rows: 35px 50px 45px 60px;        
+        width: 310px;
+        height: 230px;    
+        padding: 8px;
+        grid-template-columns: 20px 115px 20px 100px 30px;
+        grid-template-rows: 40px 35px 50px 50px 40px;        
     }    
     .calc__title {        
         font-size: 16px;
@@ -271,7 +289,10 @@
         line-height: 1.6;        
     }
     
-    
+    .container_text {
+        font-size: 65px;
+    }
+
     .calc__container_input {
         border: none;
         font-size: 18px;
@@ -293,12 +314,22 @@
     }
     
     .result_part {        
-        font-size: 12px;
-        line-height: 1.7;        
+        font-size: 11px;
+        height: 45px;
+        line-height: 2.5;        
     }
     
     .result_part_comment {        
         font-size: 11px;
         line-height: 1.2;        
     }    
+
+    .container_item:nth-child(9) {
+        height: 45px;
+    }
+
+    .container_item:nth-child(10) {
+        width: 80%;
+        height: 40px;
+    }
 }
