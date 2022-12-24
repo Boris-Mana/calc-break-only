@@ -1,8 +1,8 @@
 .filters {
-    width: 300px;
+    width: 260px;
     text-align: left;
-    padding: 20px;
-    margin: 0;
+    padding: 10px;
+    /* margin: auto; */
     background-color: #F2F2F2;
     /* border-right: 2px solid grey; */
 }
@@ -197,9 +197,41 @@
     font-size: 12px;
 }
 
+.filters__breadscr-title {
+    font-weight: bold;
+    font-size: 12px;
+    color: gray;
+    margin: 0;
+    padding: 0;
+}
+
+.filters__breadscr-container {
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.filters__breadscr-text {
+    /* flex-basis: 30%; */
+    width: 1fr;
+    max-width: 100px;
+    max-height: 16px;
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
+    color: gray;
+    margin: 0;
+    padding: 0;
+}
+
 @media screen and (max-width: 767px) {
     .filters {
         padding: 10px;
+        margin: auto;
     }
 
     .filters__lable {

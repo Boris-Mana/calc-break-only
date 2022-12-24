@@ -1,0 +1,46 @@
+.header {
+    width: 100%;  
+    font-size: calc(10px + 2vmin);
+    color: #000;
+    display: flex;
+    flex-direction: column;    
+  }  
+
+.header__logo {
+  width: 250px;
+  align-self: flex-end;
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.header__title {
+    font-family: "Montserrat Bold", Arial, sans-serif;
+    /* max-width: 500px; */
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    margin: auto;
+    padding: 10px 0 0;
+    color: #f60;
+  }
+
+.header__subtitle {
+    font-family: "Montserrat Regular", Arial, sans-serif;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    color: #f60;
+}
+  .header__text {
+    font-family: "Montserrat Regular", Arial, sans-serif;
+      /* width: 100%; */
+      font-size: 16px;
+      line-height: 1.2;
+      text-align: center;
+      margin: auto;
+      /* padding: 0 0 30px; */
+      padding: 0;
+  }

@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import Calc from "../Calc/Calc";
 import About from '../About/About';
 import Filters from '../Filters/Filters';
-import InfoNav from '../InfoNav/InfoNav';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
+import AdditionalInfo from "../AdditionalInfo/AdditionalInfo";
 
 
 function App() {
@@ -28,17 +30,18 @@ function App() {
   // });
 
   return (
-    <>
     <div className="App">
-      <Filters onSendResult={handleRatioCalculated}/>
-      <div>
-        {/* <About /> */}
-        <Calc calculated={ratioCalc}/>
-        
-      </div>      
+      <Header />
+      <div className="App__container">
+        <Filters onSendResult={handleRatioCalculated} />
+        <div className="App__container-right">
+          <About />
+          <Calc calculated={ratioCalc} />
+          <AdditionalInfo />
+        </div>
+      </div>
+      <Footer />
     </div>
-    {/* <InfoNav />         */}
-    </>
   );
 }
 

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import logoInvOcenAnalitic from "../../images/investOcenkaAnalitycCenter.svg"
+
 export default function Calc({ calculated }) {
   const [numenator, setNumenator] = useState();
   const [denumenator, setDenumenator] = useState();
@@ -27,16 +29,19 @@ export default function Calc({ calculated }) {
     e.preventDefault();
     setDegree(e.target.value);
   };
-  
+
   useEffect(() => {
     setDegree(calculated);
   }, [calculated]);
 
   return (
     <form>
-      <h2 className="calc__title">Калькулятор расчета корректировки на площадь</h2>
-      <p className="calc__subtitle">(Фактор масштаба)</p>
+      {/* <h2 className="calc__title">Калькулятор расчета корректировки на площадь</h2> */}
+      {/* <p className="calc__subtitle">(Фактор масштаба)</p> */}
       <fieldset className="calc__container">
+        <div className="container_item">
+          <img className="calc__logo" src={logoInvOcenAnalitic} alt="Логотип ИнвестОценка аналитический центр"></img>
+        </div>
         <div className="container_item">
           <p className="container_text">(</p>
         </div>
@@ -100,13 +105,11 @@ export default function Calc({ calculated }) {
           </div>
         </div>
         <div className="container_item">
-          <div className="result_part_comment">
-            <p>корректировка в долях</p>
-          </div>
-
-          <p className="result_part_or" />
-          <div className="result_part_comment">
-            <p>корректировка в %</p>
+          <div>
+            <p className="result_part_comment">корректировка в долях</p>
+          </div>          
+          <div>
+            <p className="result_part_comment">корректировка в %</p>
           </div>
         </div>
       </fieldset>

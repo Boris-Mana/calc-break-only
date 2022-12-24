@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/calc-break-only/static/css/main.9f5ee2e3.css",
-    "main.js": "/calc-break-only/static/js/main.7fbafc75.js",
+    "main.css": "/calc-break-only/static/css/main.76baf6cf.css",
+    "main.js": "/calc-break-only/static/js/main.c995b4e4.js",
     "static/js/787.3e0a177a.chunk.js": "/calc-break-only/static/js/787.3e0a177a.chunk.js",
+    "static/media/map.png": "/calc-break-only/static/media/map.8b47e93605e85d0ceb19.png",
     "static/media/logoInvestocenka3.svg": "/calc-break-only/static/media/logoInvestocenka3.12269f54e8f872ab0e22cdd5eac9d7d8.svg",
     "static/media/montserrat-bold.woff": "/calc-break-only/static/media/montserrat-bold.05eda27dcdadfda355f6.woff",
     "static/media/montserrat-regular.woff": "/calc-break-only/static/media/montserrat-regular.e01d048caf7e291dbc7a.woff",
@@ -10,13 +11,15 @@
     "static/media/montserrat-regular.woff2": "/calc-break-only/static/media/montserrat-regular.06bb8016397fac883e13.woff2",
     "static/media/montserrat-bold.woff2": "/calc-break-only/static/media/montserrat-bold.d5dcfbf5990fe993c7c0.woff2",
     "static/media/montserrat-light.woff2": "/calc-break-only/static/media/montserrat-light.321a2ac93846daf8e951.woff2",
+    "static/media/investOcenkaAnalitycCenter.svg": "/calc-break-only/static/media/investOcenkaAnalitycCenter.8f9cc7168bab644dd62f5678f3ac1f99.svg",
+    "static/media/test_table.png": "/calc-break-only/static/media/test_table.9764d42259b2622ae50a.png",
     "index.html": "/calc-break-only/index.html",
-    "main.9f5ee2e3.css.map": "/calc-break-only/static/css/main.9f5ee2e3.css.map",
-    "main.7fbafc75.js.map": "/calc-break-only/static/js/main.7fbafc75.js.map",
+    "main.76baf6cf.css.map": "/calc-break-only/static/css/main.76baf6cf.css.map",
+    "main.c995b4e4.js.map": "/calc-break-only/static/js/main.c995b4e4.js.map",
     "787.3e0a177a.chunk.js.map": "/calc-break-only/static/js/787.3e0a177a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f5ee2e3.css",
-    "static/js/main.7fbafc75.js"
+    "static/css/main.76baf6cf.css",
+    "static/js/main.c995b4e4.js"
   ]
 }
