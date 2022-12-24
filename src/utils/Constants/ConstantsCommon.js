@@ -25,15 +25,15 @@ const REGIONS = [
     {value: 'Тамбовская', 'isOn': true},    
 ];
 
-const YEARSELECTED = '2022';
-const REGIONSELECTED = 'Воронежская';
+// const YEARSELECTED = '2022';
+// const REGIONSELECTED = 'Воронежская';
 const CORRECTIONSELECTED = 'Общая площадь (коэффициент торможения)';
 
 export {
     CORRECTIONTYPES,    
     REGIONS,    
-    YEARSELECTED,
-    REGIONSELECTED,
+    // YEARSELECTED,
+    // REGIONSELECTED,
     CORRECTIONSELECTED,
 
 };

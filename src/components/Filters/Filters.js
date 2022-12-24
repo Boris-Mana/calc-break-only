@@ -8,8 +8,8 @@ import ChildrenRadioInItem from "./Children/ChildrenRadioInItem";
 import calculateBreakRatio from "../../utils/calculateBreakRatio";
 
 import {
-    YEARSELECTED,
-    REGIONSELECTED,
+    // YEARSELECTED,
+    // REGIONSELECTED,
     CORRECTIONSELECTED,
 } from '../../utils/Constants/ConstantsCommon'
 
@@ -19,10 +19,11 @@ export default function Calc({ onSendResult, resutToShow }) {
     const [isSendResultActive, setIsSendResultActive] = useState(false);
 
     const [correctionType, setCorrectionType] = useState(CORRECTIONSELECTED);
-    const [year, setYear] = useState(YEARSELECTED);
-    const [yearBread, setYearBread] = useState(YEARSELECTED);
-    const [region, setRegion] = useState(REGIONSELECTED);
-    const [regionBread, setRegionBread] = useState(REGIONSELECTED);
+    const [year, setYear] = useState(YEARS_BREAK[0].value);
+    const [yearComment, setYearComment] = useState(YEARS_BREAK[0].comment);
+    // const [yearBread, setYearBread] = useState(YEARSELECTED);
+    const [region, setRegion] = useState(REGIONS_BREAK[0].value);
+    // const [regionBread, setRegionBread] = useState(REGIONSELECTED);
     const [realtyType, setRealtyType] = useState('');
     const [realtyTypeBread, setRealtyTypeBread] = useState('');
     const [purpose, setPurpose] = useState('');
@@ -35,7 +36,9 @@ export default function Calc({ onSendResult, resutToShow }) {
     const [ratioBreakResult, setRatioBreakResult] = useState('');    
 
     const handleYearChange = (category) => {
+        const year_index = YEARS_BREAK.findIndex(item => item.value === category);
         setYear(category);
+        setYearComment(YEARS_BREAK[year_index].comment)
         // console.log('Сработал селектор', category);
     };
 
@@ -167,7 +170,7 @@ export default function Calc({ onSendResult, resutToShow }) {
 
             <fieldset className="filters__form">
                 <FilterElement title="Область (регион)" children={chooseDistrict} childrenDrop={childrenRegionDrop} />
-                <FilterElement title="Период (год)" children={chooseYear} childrenDrop={childrenYearDrop} />
+                <FilterElement title="Дата актуальности исследования" comment={yearComment} children={chooseYear} childrenDrop={childrenYearDrop} />
                 <FilterElement title="Тип недвижимости" children={chooseRealtyType} />
                 <FilterElement
                     title={`Функциональное назначение (вид использования)`}
@@ -177,19 +180,19 @@ export default function Calc({ onSendResult, resutToShow }) {
                 />
 
                 <FilterElement title="Вид интервала значений" children={paramsChooseIntervalTypeBreak} />
-                <FilterElement title="Значение коэффициента торможения" children={intervalType === 'dov' ? chooseMinMaxMidTypeDov : chooseMinMaxMidTypeExt} />
+                <FilterElement title="Значение коэффициента торможения" children={intervalType === 'Доверительный' ? chooseMinMaxMidTypeDov : chooseMinMaxMidTypeExt} />
 
             </fieldset>
             <h3 className="filters__breadscr-title">
                 Выбраны параметры:
             </h3>
             <div className="filters__breadscr-container">
-                <p className="filters__breadscr-text">{`${year} \\`}</p>
-                <p className="filters__breadscr-text">{`${region} \\`}</p>
-                <p className="filters__breadscr-text">{`${realtyType} \\`}</p>
-                <p className="filters__breadscr-text">{`${purpose} \\`}</p>
-                <p className="filters__breadscr-text">{`${intervalType} \\`}</p>
-                <p className="filters__breadscr-text">{`${minMaxMid} \\`}</p>                
+                <p className="filters__breadscr-text">{`${year} > `}</p>
+                <p className="filters__breadscr-text">{`${region} > `}</p>
+                <p className="filters__breadscr-text">{`${realtyType} > `}</p>
+                <p className="filters__breadscr-text">{`${purpose} > `}</p>
+                <p className="filters__breadscr-text">{`${intervalType} > `}</p>
+                <p className="filters__breadscr-text">{`${minMaxMid}`}</p>                
             </div>
             {breakResultBox}
         </form>

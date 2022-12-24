@@ -10,7 +10,10 @@ export default function AdditionalInfo() {
     };
 
     const toShow = (
-        <img className="additional__table" src={test_table}></img>
+        <>
+            <p>Данная секция находится в стадии создания. Представленное изображение - для демонстрации</p>
+            <img className="additional__table" src={test_table}></img>
+        </>
     )
 
     return (

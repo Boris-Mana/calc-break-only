@@ -1,73 +1,138 @@
-.infoNav {
+.footer {
   width: 95%;
   /* max-width: 100%; */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   /* column-gap: 200px; */
   padding: 0;
-  margin: auto;
+  margin: 0;
   /* margin-left: 40px;   */
   /* margin-right: 40px;   */
   border-top: 2px solid #c5c5c5;
+  padding-top: 25px;
 }
 
-.infoNav__logo {
+.footer__logo {
   height: 7vmin;
   pointer-events: none;
 }
-
+/* 
 @media (prefers-reduced-motion: no-preference) {
-  .infoNav {
+  .footer {
     padding-top: 15px;
   }
 
-  .infoNav-logo {
+  .footer-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+} */
+
+.footer_title {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+  color: gray;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
 }
 
-.infoNav__link {
-  margin-top: 15px;
-  max-width: 500px;
+.footer__item-container {
+  width: 100%;
+}
+
+.footer__link {
+  /* margin-top: 50px; */
+  /* max-width: 500px; */
   /* min-height: 50px; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
   color: #4d4d4d;
   gap: 20px;
   /* text-decoration: none; */
   font-family: 'Montserrat Regular', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
+  text-decoration: none;
   cursor: pointer;
   padding: 0;
   margin: 0;
 }
 
-.infoNav__link:hover {
+.footer__link:hover {
   opacity: 0.6;
   color: #f60;
   transition: opacity 1s linear;
 }
 
-.infoNav__copyright {
+.footer__copyright {
   font-family: 'Montserrat Regular', Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: .05em;
+  margin: 0;
+  padding: 0;  
+  margin-bottom: 20px;
+}
+
+.footer__logos {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  align-items: center;
+  column-gap: 20px; 
+}
+
+.footer__logos_ocenshiki {  
+  height: 80px;
+}
+
+.footer__logos_rieltors {  
+  width: 140px;
+}
+
+.footer__logos_sud {
+  width: 80px;
+  height: auto;
+}
+
+.footer__logos-box {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer__logos-text {
+  width: 115px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 11px;
   line-height: 1.2;
 }
 
+
 @media screen and (max-width: 767px) {
-  .infoNav {
+  .footer {
     flex-direction: column;
     justify-content: center;
   }
 
-  .infoNav__link {
+  .footer__link {
     font-size: 12px;
   }
 
-  .infoNav__copyright {
+  .footer__copyright {
     font-size: 11px;
+  }
+
+  .footer__logos {
+    justify-content: center;
+    column-gap: 40px;
   }
 }

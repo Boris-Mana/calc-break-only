@@ -17,7 +17,7 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
     };
 
     const getDovInterval = () => {
-        if (year === '2022') {
+        if (year === '01.01.2023') {
             if (region === 'Белгородская') {
                 if (realtyType === 'земля') {
                     if (purpose === 'коммерческая застройка') {
@@ -111,7 +111,7 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
                     }
                 }
             }
-        } else if (year === '2021') {
+        } else if (year === '01.01.2022') {
             if (region === 'Белгородская') {
                 if (realtyType === 'земля') {
                     if (purpose === 'коммерческая застройка') {
@@ -205,7 +205,7 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
                     }
                 }
             }
-        } else if (year === '2020') {
+        } else if (year === '01.01.2021') {
             if (region === 'Белгородская') {
                 if (realtyType === 'земля') {
                     if (purpose === 'коммерческая застройка') {
@@ -299,7 +299,7 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
                     }
                 }
             }
-        } else if (year === '2019') {
+        } else if (year === '01.01.2020') {
             if (region === 'Белгородская') {
                 if (realtyType === 'земля') {
                     if (purpose === 'коммерческая застройка') {
@@ -400,7 +400,7 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
     };
     
     const getExtInterval = () => {
-        if (year === '2022') {
+        if (year === '01.01.2023') {
             if (region === 'Белгородская') {
                 if (realtyType === 'земля') {
                     if (purpose === 'коммерческая застройка') {
@@ -494,7 +494,7 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
                     }
                 }
             }
-        } else if (year === '2021') {
+        } else if (year === '01.01.2022') {
             if (region === 'Белгородская') {
                 if (realtyType === 'земля') {
                     if (purpose === 'коммерческая застройка') {
@@ -588,7 +588,7 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
                     }
                 }
             }
-        } else if (year === '2020') {
+        } else if (year === '01.01.2021') {
             if (region === 'Белгородская') {
                 if (realtyType === 'земля') {
                     if (purpose === 'коммерческая застройка') {
@@ -682,7 +682,7 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
                     }
                 }
             }
-        } else if (year === '2019') {
+        } else if (year === '01.01.2020') {
             if (region === 'Белгородская') {
                 if (realtyType === 'земля') {
                     if (purpose === 'коммерческая застройка') {
