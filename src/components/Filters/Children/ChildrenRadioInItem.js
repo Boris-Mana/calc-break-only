@@ -1,4 +1,4 @@
-export default function ChildrenRadioInItem({ name, value, text, isDisable, handlerOnChange}) {
+export default function ChildrenRadioInItem({ name, value, text, isDisable, handlerOnChange}) {    
     return(
         <label className={`filters__lable ${isDisable && "filters__lable_disabled"}`}>
                 <input

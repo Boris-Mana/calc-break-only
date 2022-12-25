@@ -8,12 +8,11 @@ export default function FilterElement({ title, comment, children, childrenDrop, 
                     {children}
                     {childrenDrop && childrenDrop}
                 </div>
-            </div>
-            {comment && (
-                <div>
-                    <p className='filters__choices-comment'>{comment}</p>
-                </div>
+                {comment && (
+                <p className='filters__choices-comment'>{comment}</p>
             )}
+            </div>
+            
 
         </>
     )
