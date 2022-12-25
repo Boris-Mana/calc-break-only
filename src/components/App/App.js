@@ -76,38 +76,40 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <div className="App__container">
-        <Filters
-          year={year}
-          yearComment={yearComment}
-          region={region}
-          realtyType={realtyType}
-          purpose={purpose}
-          intervalType={intervalType}
-          minMaxMid={minMaxMid}
-          onSendResult={handleRatioCalculated}
-          onSetYear={handleYearChange}
-          onSetRegion={handleRegionChange}
-          onSetRealtyType={handleRealTypeChange}
-          onSetPupose={handlePurposeChange}
-          onSetInterval={handleInterval}
-          onSetMinMax={handleSetMinMaxMidl}
-        />
-        <div className="App__container-right">
-          <About />
-          <Calc calculated={ratioCalc} />
-          <AdditionalInfo
+      <div className="App__main-box">
+        <Header />
+        <div className="App__container">
+          <Filters
             year={year}
+            yearComment={yearComment}
             region={region}
             realtyType={realtyType}
             purpose={purpose}
             intervalType={intervalType}
             minMaxMid={minMaxMid}
+            onSendResult={handleRatioCalculated}
+            onSetYear={handleYearChange}
+            onSetRegion={handleRegionChange}
+            onSetRealtyType={handleRealTypeChange}
+            onSetPupose={handlePurposeChange}
+            onSetInterval={handleInterval}
+            onSetMinMax={handleSetMinMaxMidl}
           />
+          <div className="App__container-right">
+            <About />
+            <Calc calculated={ratioCalc} />
+            <AdditionalInfo
+              year={year}
+              region={region}
+              realtyType={realtyType}
+              purpose={purpose}
+              intervalType={intervalType}
+              minMaxMid={minMaxMid}
+            />
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

@@ -6,16 +6,16 @@ const YEARS_BREAK = [
 ];
 
 const PURPOSE_BREAK_LAND = [    
-    {name: 'purpose', value: 'коммерческая застройка', text: 'Коммерческая застройка (торгово-офисная, МЖС, объекты рекреации)', isOn: true},
-    {name: 'purpose', value: 'индустриальная застройка', text: 'Индустриальная застройка (производственно-складская)', isOn: true},
-    {name: 'purpose', value: 'под придорожный сервис', text: 'Под объекты придорожного сервиса', isOn: true},
+    {name: 'purpose', value: 'Коммерческая застройка', text: 'Коммерческая застройка (торгово-офисная, МЖС, объекты рекреации)', isOn: true},
+    {name: 'purpose', value: 'Индустриальная застройка', text: 'Индустриальная застройка (производственно-складская)', isOn: true},
+    {name: 'purpose', value: 'Под придорожный сервис', text: 'Под объекты придорожного сервиса', isOn: true},
     
 ];
 
 const PURPOSE_BREAK_BUILD = [    
-    {name: 'purpose', value: 'торг-офис', text: 'Торгово-офисное', isOn: true},
-    {name: 'purpose', value: 'производственно-складское', text: 'Производственно-складское', isOn: true},
-    {name: 'purpose', value: 'прочее коммерческое', text: 'Прочее коммерческое', isOn: true},
+    {name: 'purpose', value: 'Торг-офис', text: 'Торгово-офисное', isOn: true},
+    {name: 'purpose', value: 'Производственно-складское', text: 'Производственно-складское', isOn: true},
+    {name: 'purpose', value: 'Прочее коммерческое', text: 'Прочее коммерческое', isOn: true},
 ];
 
 const REGIONS_BREAK = [

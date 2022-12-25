@@ -112,15 +112,15 @@ export default function Filters({
     const chooseDistrict = <ChildrenForDropMenu name="region" value={region} />
     const chooseRealtyType = (
         <>
-            <ChildrenRadioInItem name='type' value='земля' text='Земельные участки' handlerOnChange={onSetRealtyType} />
-            <ChildrenRadioInItem name='type' value='помещения' text='Здания, нежилые помещения' handlerOnChange={onSetRealtyType} />
+            <ChildrenRadioInItem name='type' value='Земля' text='Земельные участки' handlerOnChange={onSetRealtyType} />
+            <ChildrenRadioInItem name='type' value='Помещения' text='Здания, нежилые помещения' handlerOnChange={onSetRealtyType} />
         </>
     );
 
     const paramsMinMaxChooseDoverInterval = [
-        { name: 'use', value: 'минимальное', text: 'Минимальное', isOn: true },
-        { name: 'use', value: 'среднее', text: 'Среднее', isOn: true },
-        { name: 'use', value: 'максимальное', text: 'Максимальное', isOn: true },
+        { name: 'use', value: 'Минимальное', text: 'Минимальное', isOn: true },
+        { name: 'use', value: 'Среднее', text: 'Среднее', isOn: true },
+        { name: 'use', value: 'Максимальное', text: 'Максимальное', isOn: true },
     ];
 
     const paramsChooseIntervalTypeBreak = (
@@ -131,9 +131,9 @@ export default function Filters({
     );
 
     const paramsMinMaxChooseExtInterval = [
-        { name: 'use', value: 'минимальное', text: 'Минимальное', isOn: false },
-        { name: 'use', value: 'среднее', text: 'Среднее', isOn: true },
-        { name: 'use', value: 'максимальное', text: 'Максимальное', isOn: false },
+        { name: 'use', value: 'Минимальное', text: 'Минимальное', isOn: false },
+        { name: 'use', value: 'Среднее', text: 'Среднее', isOn: true },
+        { name: 'use', value: 'Максимальное', text: 'Максимальное', isOn: false },
     ];
 
 
@@ -179,7 +179,7 @@ export default function Filters({
                 <FilterElement title="Тип недвижимости" children={chooseRealtyType} />
                 <FilterElement
                     title={`Функциональное назначение (вид использования)`}
-                    children={realtyType === 'земля' ?
+                    children={realtyType === 'Земля' ?
                         fillRadioBox(PURPOSE_BREAK_LAND, onSetPupose) :
                         fillRadioBox(PURPOSE_BREAK_BUILD, onSetPupose)}
                 />

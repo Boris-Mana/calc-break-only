@@ -4,7 +4,7 @@ export default function About() {
     return (
         <section className="header">            
             <h1 className="header__title">Калькулятор расчета корректировки на площадь</h1>            
-            <p className="header__subtitle">(фактор масштаба)</p>
+            {/* <p className="header__subtitle">(фактор масштаба)</p> */}
             <p className="header__subtitle">при определении стоимости недвижимости в Центрально-Черноземном регионе</p>
             
             {/* <p className='header__text'>Возможные значения коэффициента торможения:<br /><br />Общественные здания
