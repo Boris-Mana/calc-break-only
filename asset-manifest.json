@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/calc-break-only/static/css/main.b6512269.css",
-    "main.js": "/calc-break-only/static/js/main.b88433fb.js",
+    "main.js": "/calc-break-only/static/js/main.6ceb8eb4.js",
     "static/js/787.3e0a177a.chunk.js": "/calc-break-only/static/js/787.3e0a177a.chunk.js",
     "static/media/map1.png": "/calc-break-only/static/media/map1.7685da34b5ab6d8fdf70.png",
     "static/media/logoInvestocenka3.svg": "/calc-break-only/static/media/logoInvestocenka3.12269f54e8f872ab0e22cdd5eac9d7d8.svg",
@@ -19,11 +19,11 @@
     "static/media/union_rielters_logo.svg": "/calc-break-only/static/media/union_rielters_logo.5993666a05d5315e855299449363c14e.svg",
     "index.html": "/calc-break-only/index.html",
     "main.b6512269.css.map": "/calc-break-only/static/css/main.b6512269.css.map",
-    "main.b88433fb.js.map": "/calc-break-only/static/js/main.b88433fb.js.map",
+    "main.6ceb8eb4.js.map": "/calc-break-only/static/js/main.6ceb8eb4.js.map",
     "787.3e0a177a.chunk.js.map": "/calc-break-only/static/js/787.3e0a177a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6512269.css",
-    "static/js/main.b88433fb.js"
+    "static/js/main.6ceb8eb4.js"
   ]
 }
