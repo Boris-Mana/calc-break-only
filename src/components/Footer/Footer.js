@@ -7,19 +7,21 @@ import unionFinansSudExpert from '../../images/union_finans_sud_expert_logo.png'
 export default function Footer() {
     return (
         <nav className="footer">
-            <div>
+            <div className="footer__item-container">
                 <h2 className="footer_title">Разработка:</h2>
-                <a
-                    className="footer__link"
-                    href="https://investocenka.ru"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <div className="footer__logos footer__logos_dev">
+                    <a
+                        className="footer__link"
+                        href="https://investocenka.ru"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
 
-                    <p className="footer__copyright">ООО «Аналитическая Консалтинговая Группа «ИнвестОценка» © 2022</p>
-                    {/* <p className="footer__copyright">© 2022</p> */}
-                    {/* <img src={logo} className="footer__logo" alt="logo" /> */}
-                </a>
+                        {/* <p className="footer__copyright">ООО «Аналитическая Консалтинговая Группа «ИнвестОценка» © 2022</p> */}
+                        <img src={logo} className="footer__logo" alt="Логотип АКГ Инвестоценка" />
+                    </a>
+                    <p className="footer__copyright">© 2022, ООО "Аналитическая Консалтинговая Группа "ИнвестОценка"</p>
+                </div>
             </div>
             <div className="footer__item-container">
                 <h2 className="footer_title">При поддержке:</h2>

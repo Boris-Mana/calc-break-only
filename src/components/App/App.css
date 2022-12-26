@@ -1,12 +1,19 @@
-.App {
+.App {  
+  background: #e6e6e6 url('../../images/map1.png'); 
+  background-position: left top;
+  background-attachment: fixed;
+  background-repeat:no-repeat; 
+  background-size: cover;
+  background-size: 100% 100vh;
+}
+
+.App__main-box {
   width: 748px;  
   max-width: 748px;
   font-family: "Montserrat Regular", Arial, sans-serif;
   text-align: center;
   font-size: 16px;
-  line-height: 1.4;
-  /* background: #e6e6e6 url(../../images/map1.png) center; */
-  /* overflow: visible; */
+  line-height: 1.4;  
   background-color: #e6e6e6;
   display: flex;
   flex-direction: column;
@@ -44,7 +51,7 @@
 } */
 
 @media screen and (max-width: 767px) {
-  .App {
+  .App__main-box {
     max-width: 320px;    
   }
 

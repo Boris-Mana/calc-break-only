@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  /* column-gap: 200px; */
+  row-gap: 30px;
   padding: 0;
   margin: 0;
   /* margin-left: 40px;   */
@@ -69,12 +69,12 @@
 
 .footer__copyright {
   font-family: 'Montserrat Regular', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.2;
   letter-spacing: .05em;
   margin: 0;
-  padding: 0;  
-  margin-bottom: 20px;
+  padding: 0; 
+  margin-top: 10px;   
 }
 
 .footer__logos {
@@ -83,8 +83,12 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between; 
-  align-items: center;
+  align-items: flex-start;
   column-gap: 20px; 
+}
+
+.footer__logos_dev {
+  align-items: flex-end;
 }
 
 .footer__logos_ocenshiki {  
@@ -133,6 +137,12 @@
 
   .footer__logos {
     justify-content: center;
+    align-items: center;
     column-gap: 40px;
+  }
+
+  .footer__logos_dev {
+    justify-content: space-between;
+    align-items: flex-end;
   }
 }
