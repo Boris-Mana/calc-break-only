@@ -113,7 +113,7 @@ export default function Filters({
     const chooseRealtyType = (
         <>
             <ChildrenRadioInItem name='type' value='Земля' text='Земельные участки' handlerOnChange={onSetRealtyType} />
-            <ChildrenRadioInItem name='type' value='Помещения' text='Здания, нежилые помещения' handlerOnChange={onSetRealtyType} />
+            <ChildrenRadioInItem name='type' value='Здания, помещения' text='Здания, нежилые помещения' handlerOnChange={onSetRealtyType} />
         </>
     );
 
