@@ -7,6 +7,8 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import AdditionalInfo from "../AdditionalInfo/AdditionalInfo";
 
+import backgroundImg from '../../images/map1900rgb.png'
+
 import { YEARS_BREAK, REGIONS_BREAK } from "../../utils/Constants/ConstantsBreak";
 
 
@@ -75,7 +77,8 @@ function App() {
   // });
 
   return (
-    <div className="App">
+    <div className='App'>
+      <img className="App__background" src={backgroundImg} alt=''/>
       <div className="App__main-box">
         <Header />
         <div className="App__container">

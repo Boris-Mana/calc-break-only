@@ -21,11 +21,11 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
             if (region === 'Белгородская') {
                 if (realtyType === 'Земля') {
                     if (purpose === 'Коммерческая застройка') {
-                        res = getResultIfMinMidMax(0.153, 0.181, 0.208);
+                        res = getResultIfMinMidMax(0.133, 0.161, 0.188);
                     } else if (purpose === 'Индустриальная застройка') {
-                        res = getResultIfMinMidMax(0.191, 0.219, 0.247);
+                        res = getResultIfMinMidMax(0.165, 0.193, 0.221);
                     } else if (purpose === 'Под придорожный сервис') {
-                        res = getResultIfMinMidMax(0.178, 0.206, 0.234);
+                        res = getResultIfMinMidMax(0.158, 0.186, 0.214);
                     }
                 } else {
                     if (purpose === 'Торг-офис') {
@@ -41,11 +41,11 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
             } else if (region === 'Воронежская') {
                 if (realtyType === 'Земля') {
                     if (purpose === 'Коммерческая застройка') {
-                        res = getResultIfMinMidMax(0.161, 0.189, 0.217);
+                        res = getResultIfMinMidMax(0.141, 0.169, 0.197);
                     } else if (purpose === 'Индустриальная застройка') {
-                        res = getResultIfMinMidMax(0.203, 0.231, 0.259);
+                        res = getResultIfMinMidMax(0.173, 0.201, 0.229);
                     } else if (purpose === 'Под придорожный сервис') {
-                        res = getResultIfMinMidMax(0.166, 0.194, 0.222);
+                        res = getResultIfMinMidMax(0.146, 0.174, 0.202);
                     }
                 } else {
                     if (purpose === 'Торг-офис') {
@@ -59,11 +59,11 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
             } else if (region === 'Курская') {
                 if (realtyType === 'Земля') {
                     if (purpose === 'Коммерческая застройка') {
-                        res = getResultIfMinMidMax(0.158, 0.186, 0.214);
+                        res = getResultIfMinMidMax(0.138, 0.166, 0.194);
                     } else if (purpose === 'Индустриальная застройка') {
-                        res = getResultIfMinMidMax(0.207, 0.235, 0.263);
+                        res = getResultIfMinMidMax(0.179, 0.207, 0.235);
                     } else if (purpose === 'Под придорожный сервис') {
-                        res = getResultIfMinMidMax(0.173, 0.201, 0.229);
+                        res = getResultIfMinMidMax(0.152, 0.18, 0.208);
                     }
                 } else {
                     if (purpose === 'Торг-офис') {
@@ -77,11 +77,11 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
             } else if (region === 'Липецкая') {
                 if (realtyType === 'Земля') {
                     if (purpose === 'Коммерческая застройка') {
-                        res = getResultIfMinMidMax(0.150, 0.178, 0.206);
+                        res = getResultIfMinMidMax(0.128, 0.156, 0.184);
                     } else if (purpose === 'Индустриальная застройка') {
-                        res = getResultIfMinMidMax(0.198, 0.226, 0.254);
+                        res = getResultIfMinMidMax(0.178, 0.206, 0.234);
                     } else if (purpose === 'Под придорожный сервис') {
-                        res = getResultIfMinMidMax(0.174, 0.202, 0.230);
+                        res = getResultIfMinMidMax(0.149, 0.177, 0.205);
                     }
                 } else {
                     if (purpose === 'Торг-офис') {
@@ -95,11 +95,11 @@ export default function calculateBreakRatio(year, region, realtyType, purpose, i
             } else if (region === 'Тамбовская') {
                 if (realtyType === 'Земля') {
                     if (purpose === 'Коммерческая застройка') {
-                        res = getResultIfMinMidMax(0.156, 0.184, 0.212);
+                        res = getResultIfMinMidMax(0.133, 0.161, 0.189);
                     } else if (purpose === 'Индустриальная застройка') {
-                        res = getResultIfMinMidMax(0.194, 0.222, 0.250);
+                        res = getResultIfMinMidMax(0.167, 0.195, 0.223);
                     } else if (purpose === 'Под придорожный сервис') {
-                        res = getResultIfMinMidMax(0.176, 0.204, 0.232);
+                        res = getResultIfMinMidMax(0.146, 0.174, 0.202);
                     }
                 } else {
                     if (purpose === 'Торг-офис') {

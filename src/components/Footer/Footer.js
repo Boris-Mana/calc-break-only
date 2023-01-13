@@ -20,7 +20,7 @@ export default function Footer() {
                         {/* <p className="footer__copyright">ООО «Аналитическая Консалтинговая Группа «ИнвестОценка» © 2022</p> */}
                         <img src={logo} className="footer__logo" alt="Логотип АКГ Инвестоценка" />
                     </a>
-                    <p className="footer__copyright">© 2022, ООО "Аналитическая Консалтинговая Группа "ИнвестОценка"</p>
+                    <p className="footer__copyright">© 2023, ООО "Аналитическая Консалтинговая Группа "ИнвестОценка"</p>
                 </div>
             </div>
             <div className="footer__item-container">
