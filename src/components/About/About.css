@@ -23,9 +23,9 @@
     font-size: 14px;
     line-height: 1.2;    
     margin: auto;
-    text-align: left;
+    text-align: center;
     padding: 0;
-    /* color: #f60; */
+    color: #828282;
     list-style: none;
   }
   .about__text {
@@ -34,6 +34,7 @@
       font-size: 12px;
       line-height: 1.4;
       text-align: left;
+      color: #000;
       margin: 0;      
       padding: 5px 0 0;
       padding-left: 15px;

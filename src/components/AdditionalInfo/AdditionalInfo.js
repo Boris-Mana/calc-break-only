@@ -1,5 +1,5 @@
 import { useState } from "react";
-import test_table from '../../images/test_table.png'
+import test_table from '../../images/testTable.png'
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 
 
