@@ -2,7 +2,7 @@ export default function Breadcrumbs({year, region, realtyType, purpose, interval
     return (
         <>
             <h3 className="breadcr__title">
-                Выбраны параметры:
+                Выбраны параметры коэффициента торможения:
             </h3>
             <div className="breadcr__container">
                 <p className="breadcr__text">{`${year} >`}</p>

@@ -22,14 +22,19 @@ export default function Filters({
     realtyType,
     purpose,
     intervalType,
-    minMaxMid,
-    onSendResult,
+    // minMaxMid,
+    // ratioCalc,
+    onGetResult,
     onSetYear,
     onSetRegion,
     onSetRealtyType,
     onSetPupose,
     onSetInterval,
     onSetMinMax,    
+    onReset,
+    onSend, 
+    isResultActive,
+    isResultToShow,
     resutToShow,
 }) {
     const [isSendResultActive, setIsSendResultActive] = useState(false);
@@ -56,7 +61,7 @@ export default function Filters({
         } else {
             setIsSendResultActive(true);
         }
-    };
+    };    
 
     // const handleRealTypeChange = (e) => {        
     //     // e.preventDefault();
@@ -81,21 +86,13 @@ export default function Filters({
     //     setMinMaxMid(e.target.value);
     // };
 
-    const calcBreakRatio = () => {
-        const breakRatio = calculateBreakRatio(year, region, realtyType, purpose, intervalType, minMaxMid)
-        setRatioBreakResult(breakRatio);
-        handleSendResultButton();
-    };
-
     const getRatio = (e) => {
         e.preventDefault();
-        onSendResult(ratioBreakResult);
-        setRatioBreakResult('');
-    };
+        // console.log('Послали просим выдать коэфф');
+        onGetResult();        
+        // setIsSendResultActive(false);    
+    };   
 
-    useEffect(() => {
-        calcBreakRatio();
-    }, [year, region, realtyType, purpose, minMaxMid, intervalType, ratioBreakResult, isSendResultActive]);
 
     const fillRadioBox = (dataArray, handler) => {
         
@@ -131,9 +128,9 @@ export default function Filters({
     );
 
     const paramsMinMaxChooseExtInterval = [
-        { name: 'use', value: 'Минимальное', text: 'Минимальное', isOn: false },
+        { name: 'use', value: 'Минимальное', text: 'Минимальное', isOn: true },
         { name: 'use', value: 'Среднее', text: 'Среднее', isOn: true },
-        { name: 'use', value: 'Максимальное', text: 'Максимальное', isOn: false },
+        { name: 'use', value: 'Максимальное', text: 'Максимальное', isOn: true },
     ];
 
 
@@ -160,32 +157,39 @@ export default function Filters({
 
     const breakResultBox = (
         <div className="filters__submit-res-box">
-            <button type="submit" className={`filters__submit-btn ${isSendResultActive ? 'filters__submit-btn_active' : ''}`}>
-                Подставить в расчет
+            <button type="reset" onClick={onReset} className='filters__reset-btn'>
+                Сбросить фильтры
             </button>
+            <button type="submit" className={`filters__submit-btn ${isResultActive ? 'filters__submit-btn_active' : ''}`}>
+                Получить результат
+            </button>            
             <div className={`filters__result ${isSendResultActive ? 'filters__result_active' : ''}`}>
-                {ratioBreakResult}
+                {isResultToShow && resutToShow}
+                {/* {ratioBreakResult} */}
             </div>
+            <button type="send" onClick={onSend} className={`filters__send-btn ${isSendResultActive ? 'filters__submit-btn_active' : ''}`}>
+                Подставить в расчет
+            </button>            
         </div>
     )
 
     return (
         <form className="filters" onSubmit={getRatio}>
-            <h2 className="filters__title">Корректировка на площадь (коэффициент торможения)</h2>
+            <h2 className="filters__title">Определение значения коэффициента торможения</h2>
 
             <fieldset className="filters__form">
                 <FilterElement title="Область (регион)" children={chooseDistrict} childrenDrop={childrenRegionDrop} />
                 <FilterElement title="Дата актуальности исследования" comment={yearComment} children={chooseYear} childrenDrop={childrenYearDrop} />
                 <FilterElement title="Тип недвижимости" children={chooseRealtyType} />
-                <FilterElement
+                {(realtyType !== '') && <FilterElement
                     title={`Функциональное назначение (вид использования)`}
                     children={realtyType === 'Земля' ?
                         fillRadioBox(PURPOSE_BREAK_LAND, onSetPupose) :
                         fillRadioBox(PURPOSE_BREAK_BUILD, onSetPupose)}
-                />
+                />}
 
-                <FilterElement title="Вид интервала значений" children={paramsChooseIntervalTypeBreak} />
-                <FilterElement title="Значение коэффициента торможения" children={intervalType === 'Доверительный' ? chooseMinMaxMidTypeDov : chooseMinMaxMidTypeExt} />
+                {(purpose !== '') && <FilterElement title="Вид интервала значений" children={paramsChooseIntervalTypeBreak} />}
+                {(intervalType !== '') && <FilterElement title="Значение коэффициента торможения" children={intervalType === 'Доверительный' ? chooseMinMaxMidTypeDov : chooseMinMaxMidTypeExt} />}
 
             </fieldset>            
             {breakResultBox}
