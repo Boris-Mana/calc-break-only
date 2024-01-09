@@ -21,10 +21,10 @@ export default function About() {
                     <strong>&#9658; Непрерывность</strong> процесса сбора и обработки информации на основе регулярных мониторингов регионального рынка недвижимости;
                 </li>
                 <li className='about__text'>
-                    <strong>&#9658; </strong>возможность использования <strong>архивной</strong> информации;
+                    <strong>&#9658; </strong>Возможность использования <strong>архивной</strong> информации;
                 </li>
                 <li className='about__text'>
-                    <strong>&#9658; </strong>возможность проведения <strong>самостоятельных </strong> расчетов.
+                    <strong>&#9658; </strong>Возможность проведения <strong>самостоятельных </strong> расчетов.
                 </li>
             </ul>
             <ul className="about__title">Для кого:

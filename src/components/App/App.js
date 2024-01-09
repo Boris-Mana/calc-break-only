@@ -10,24 +10,33 @@ import AdditionalInfo from "../AdditionalInfo/AdditionalInfo";
 import backgroundImg from '../../images/map1900rgb.png'
 
 import { YEARS_BREAK, REGIONS_BREAK } from "../../utils/Constants/ConstantsBreak";
+import calculateBreakRatio from "../../utils/calculateBreakRatio";
 
 
 function App() {
-  const [ratioCalc, setRatioCalc] = useState('');
+  const [ratioCalc, setRatioCalc] = useState('');  
   const [year, setYear] = useState(YEARS_BREAK[0].value);
   const [region, setRegion] = useState(REGIONS_BREAK[0].value);
   const [realtyType, setRealtyType] = useState('');
   const [purpose, setPurpose] = useState('');
   const [minMaxMid, setMinMaxMid] = useState('');
   const [intervalType, setIntervalType] = useState('');
+  const [isResultActive, setIsResultActive] = useState(false);
+  const [isResultToShow, setIsResultToShow] = useState(false);
+  const [isResultSend, setIsResultSend] = useState(false);
 
   const [yearComment, setYearComment] = useState(YEARS_BREAK[0].comment);
 
   // const [isCalcShow, setIsCalcShow] = useState(true);
 
-  const handleRatioCalculated = (ratio) => {
-    console.log('Получили значение коэфф:', ratio);
-    setRatioCalc(ratio);
+  const handleRatioCalculated = () => {
+    // console.log('Подставляем значение', ratioCalc);
+    setIsResultToShow(true);        
+  };
+
+  const handleRatioSend = () => {
+    // console.log('Отсылаем в калькулятор значение', ratioCalc);
+    setIsResultSend(true);
   };
 
   const handleYearChange = (category) => {
@@ -64,6 +73,38 @@ function App() {
     setMinMaxMid(e.target.value);
   };
 
+  const resetAllFilds = () => {
+    window.location.reload();
+    // setYear(YEARS_BREAK[0].value);
+    // setRegion(REGIONS_BREAK[0].value);
+    // setRealtyType('');
+    // setPurpose('');
+    // setMinMaxMid('');
+    // setIntervalType('');
+    // setRatioCalc('');
+    // setIsResultActive(false);
+    // setIsResultToShow(false);
+    // setIsResultSend(false);
+  };
+
+  const calcBreakRatio = () => {
+    const breakRatio = calculateBreakRatio(year, region, realtyType, purpose, intervalType, minMaxMid)
+    // console.log('Получили значение коэфф:', breakRatio);
+    // setRatioBreakResult(breakRatio);
+    setRatioCalc(breakRatio);
+    // handleSendResultButton();
+};
+
+useEffect(() => {
+    if (year !== '' && region !== '' && realtyType !== '' && purpose !== '' && minMaxMid !== '' && intervalType !== '') {
+      setIsResultActive(true);
+      // console.log('Активируем кнопку');      
+    } else {
+      setIsResultActive(false);
+      // console.log('Отключаем кнопку');
+    };    
+}, [year, region, realtyType, purpose, minMaxMid, intervalType]);
+
   // const handleIsCalcShow = (correctionType) => {
   //   if (correctionType === 'Общая площадь (коэффициент торможения)') {
   //     setIsCalcShow(true);
@@ -72,9 +113,12 @@ function App() {
   //   }    
   // }
 
-  // useEffect(() => {
+  useEffect(() => {
+    setRatioCalc(calculateBreakRatio(year, region, realtyType, purpose, intervalType, minMaxMid))
+    // console.log('Слушаем, вычисляем: Коэфф вычислен ', ratioCalc)
+    // handleRatioCalculated();
+  }, [year, region, realtyType, purpose, minMaxMid, intervalType]);
 
-  // });
 
   return (
     <div className='App'>
@@ -90,17 +134,22 @@ function App() {
             purpose={purpose}
             intervalType={intervalType}
             minMaxMid={minMaxMid}
-            onSendResult={handleRatioCalculated}
+            isResultActive={isResultActive}
+            isResultToShow={isResultToShow}
+            resutToShow={ratioCalc}
+            onGetResult={handleRatioCalculated}            
             onSetYear={handleYearChange}
             onSetRegion={handleRegionChange}
             onSetRealtyType={handleRealTypeChange}
             onSetPupose={handlePurposeChange}
             onSetInterval={handleInterval}
             onSetMinMax={handleSetMinMaxMidl}
+            onReset={resetAllFilds}
+            onSend={handleRatioSend}
           />
           <div className="App__container-right">
             <About />
-            <Calc calculated={ratioCalc} />
+            <Calc calculatedRatio={ratioCalc} isSend={isResultSend}/>
             <AdditionalInfo
               year={year}
               region={region}

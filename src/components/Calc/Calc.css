@@ -4,7 +4,7 @@
     padding: 15px;    
     margin: auto;
     display: grid;
-    grid-template-columns: 40px 170px 40px 120px 50px;
+    grid-template-columns: 40px 195px 40px 95px 50px;
     grid-template-rows: 40px 45px 45px 60px 20px;
     /* align-content: stretch;
     justify-content: stretch; */
@@ -247,8 +247,16 @@
 .result_part_is-result {
     font-size: 26px;  
     margin: auto;
+    padding: 0 5px;
     line-height: 1.8;    
     justify-self: flex-start;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.result_part_is-result_persent-symb {
+    font-size: 16px;
 }
 
 .result_part_comment {
@@ -276,7 +284,7 @@
         width: 310px;
         height: 230px;    
         padding: 8px;
-        grid-template-columns: 20px 115px 20px 100px 30px;
+        grid-template-columns: 20px 135px 20px 80px 30px;
         grid-template-rows: 40px 35px 50px 50px 40px;        
     }    
     .calc__title {        
