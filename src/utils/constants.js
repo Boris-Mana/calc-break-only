@@ -18,6 +18,7 @@ const CORRECTIONTYPES = [
 ];
 
 const YEARS_BREAK = [
+    {value: '2023', 'isOn': true}, 
     {value: '2022', 'isOn': true}, 
     {value: '2021', 'isOn': true},
     {value: '2020', 'isOn': true},
@@ -36,7 +37,7 @@ const YEARS_TORG = [
     {value: '2020', 'isOn': false},
     {value: '2019', 'isOn': false},
 ];
-const YEARSELECTED = '2022';
+const YEARSELECTED = '2023';
 const REGIONSELECTED = 'Воронежская';
 const CORRECTIONSELECTED = 'Общая площадь (коэффициент торможения)';
 
