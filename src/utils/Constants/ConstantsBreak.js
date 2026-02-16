@@ -1,4 +1,6 @@
 const YEARS_BREAK = [
+    {value: '01.01.2026', 'isOn': true, comment: `Актуально для даты оценки\nв период: с 1 янв по 31 дек 2026`}, 
+    {value: '01.01.2025', 'isOn': true, comment: `Актуально для даты оценки\nв период: с 1 янв по 31 дек 2025`}, 
     {value: '01.01.2024', 'isOn': true, comment: `Актуально для даты оценки\nв период: с 1 янв по 31 дек 2024`}, 
     {value: '01.01.2023', 'isOn': true, comment: `Актуально для даты оценки\nв период: с 1 янв по 31 дек 2023`}, 
     {value: '01.01.2022', 'isOn': true, comment: `Актуально для даты оценки\nв период: с 1 янв по 31 дек 2022`},
@@ -28,7 +30,7 @@ const REGIONS_BREAK = [
     {value: 'Тамбовская', 'isOn': true},    
 ];
 
-const YEARSELECTED_BREAK = '01.01.2023';
+const YEARSELECTED_BREAK = '01.01.2026';
 
 export {  
     YEARS_BREAK,

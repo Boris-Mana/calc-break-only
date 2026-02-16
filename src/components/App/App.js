@@ -150,6 +150,7 @@ useEffect(() => {
           <div className="App__container-right">
             <About />
             <Calc calculatedRatio={ratioCalc} isSend={isResultSend}/>
+            {/* <Calc calculated={ratioCalc}/> */}
             <AdditionalInfo
               year={year}
               region={region}

@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 
 import logoInvOcenAnalitic from "../../images/investOcenkaAnalitycCenter.svg"
 
-export default function Calc({ calculated }) {
+export default function Calc({ calculatedRatio, isSend }) {
   const [numenator, setNumenator] = useState();
   const [denumenator, setDenumenator] = useState();
-  const [degree, setDegree] = useState(calculated);
+  const [degree, setDegree] = useState(calculatedRatio);
 
   let result = ((denumenator / numenator) ** degree).toFixed(4);
   let result_percent = ((result - 1) * 100).toFixed(2);
@@ -31,8 +31,8 @@ export default function Calc({ calculated }) {
   };
 
   useEffect(() => {
-    setDegree(calculated);
-  }, [calculated]);
+    setDegree(calculatedRatio);
+  }, [calculatedRatio, isSend]);
 
   return (
     <form>
@@ -51,7 +51,7 @@ export default function Calc({ calculated }) {
             className="calc__container_input"
             type="number"
             onChange={handleNumenator}
-            placeholder="Пл. объекта оценки"
+            placeholder="Площадь объекта оценки"
           />
         </div>
         <div className="container_item">
@@ -60,7 +60,7 @@ export default function Calc({ calculated }) {
             className="calc__container_input"
             type="number"
             onChange={handleDenumenator}
-            placeholder="Пл. аналога"
+            placeholder="Площадь аналога"
           />
         </div>
         <div className="container_item">
@@ -68,21 +68,20 @@ export default function Calc({ calculated }) {
         </div>
         <div className="container_item">
           <div className="container_degree">
-            <p className="degree_minus">-</p>
+            {/* <p className="degree_minus">-</p> */}
             <input
               name="degr"
               className="calc__container_input calc__container_input_degree"
               type="number"
-              value={degree}
-              onChange={handleDegree}
-              placeholder="Коэфф. торможения"
+              value={isSend ? degree : ''}
+              onChange={handleDegree}              
             />
           </div>
           <div></div>
         </div>
         <div className="container_item">
           <p className="container_degree-comment container_text">
-            Вводите число без "минуса". <br /> Он уже учтен
+            Коэффициент торможения
           </p>
         </div>
         <div className="container_item">
